@@ -1,48 +1,107 @@
-# U.S. Medical Insurance Cost Analysis
+ # U.S. Medical Insurance Cost Analysis
 
-## Overview
-I analysed a dataset of U.S. medical insurance costs to understand what factors most influence insurance premiums. I built a linear regression model to predict charges based on patient characteristics.
+##  Overview
+
+This project analyses a dataset of 1,338 U.S. medical insurance records to understand what factors most influence insurance premiums. A linear regression model is built to predict medical charges based on patient demographics and lifestyle factors.
 
 **Author:** Eleanor Bryan  
 **Date:** 2026  
-**Course:** Personal Portfolio Project
+**Project Type:** Personal Portfolio Project
 
 ---
 
-## Dataset
-- **Source:** Kaggle – Medical Cost Personal Datasets  
+ Dataset
+
+The dataset comes from the **"Machine Learning with R"** textbook and is publicly available via Kaggle.
+
+| Feature | Description |
+| :--- | :--- |
+| `age` | Age of primary beneficiary (18–64) |
+| `sex` | Gender (female/male) |
+| `bmi` | Body Mass Index |
+| `children` | Number of dependents covered |
+| `smoker` | Smoking status (yes/no) |
+| `region` | Residential area in the US |
+| `charges` | Medical costs billed by health insurance ($) |
+
 - **Rows:** 1,338  
-- **Columns:** age, sex, bmi, children, smoker, region, charges
+- **Columns:** 7  
+- **Missing Values:** None
 
 ---
 
-## Tools Used
-- **Python** – pandas, numpy, matplotlib, seaborn, scikit-learn
+##  Tools & Libraries
 
+| Tool | Purpose |
+| :--- | :--- |
+| **Python** | Core programming language |
+| **Pandas** | Data manipulation and cleaning |
+| **NumPy** | Numerical operations |
+| **Matplotlib & Seaborn** | Data visualisation |
+| **Scikit-learn** | Predictive modelling (Linear Regression) |
 
 ---
 
 ## Key Findings
-1. **Smoking is the strongest predictor** – smokers pay significantly more than non-smokers
-2. **BMI and age** also have a large effect on costs
-3. **Region and sex** have smaller effects
 
-## Summary Statistics
+| Finding | Insight |
+| :--- | :--- |
+| **Smoking is the strongest predictor** | Smokers pay **$23,615 more** on average than non-smokers |
+| **BMI and age also matter** | Higher BMI and older age are associated with higher premiums |
+| **Region and sex have minimal impact** | Regional differences are small; sex has almost no effect |
 
-| | age | bmi | children | charges |
-| :--- | :--- | :--- | :--- | :--- |
-| **count** | 1338.000000 | 1338.000000 | 1338.000000 | 1338.000000 |
-| **mean** | 39.207025 | 30.663397 | 1.094918 | 13270.422265 |
-| **std** | 14.049960 | 6.098187 | 1.205493 | 12110.011237 |
-| **min** | 18.000000 | 15.960000 | 0.000000 | 1121.873900 |
-| **25%** | 27.000000 | 26.296250 | 0.000000 | 4740.287150 |
-| **50%** | 39.000000 | 30.400000 | 1.000000 | 9382.033000 |
-| **75%** | 51.000000 | 34.693750 | 2.000000 | 16639.912515 |
-| **max** | 64.000000 | 53.130000 | 5.000000 | 63770.428010 |
+### Model Performance
+
+| Metric | Result |
+| :--- | :--- |
+| **R-squared** | 0.79 |
+| **Mean Absolute Error** | $4,182 |
 
 ---
 
-## Connect With Me
-- **LinkedIn:** 
-www.linkedin.com/in/eleanor-bryan-35b922255
-- **GitHub:** https://github.com/eleanor-analytics
+##  Visualisations
+
+![EDA Visualisations](eda_visualisations.png)
+
+*The visualisation above shows: distribution of charges, charges by smoking status, charges by region, charges by sex, correlation heatmap, and BMI vs charges by smoking status.*
+
+---
+
+##  Summary Statistics
+
+| | age | bmi | children | charges |
+| :--- | :--- | :--- | :--- | :--- |
+| **count** | 1338.00 | 1338.00 | 1338.00 | 1338.00 |
+| **mean** | 39.21 | 30.66 | 1.09 | $13,270.42 |
+| **std** | 14.05 | 6.10 | 1.21 | $12,110.01 |
+| **min** | 18.00 | 15.96 | 0.00 | $1,121.87 |
+| **25%** | 27.00 | 26.30 | 0.00 | $4,740.29 |
+| **50%** | 39.00 | 30.40 | 1.00 | $9,382.03 |
+| **75%** | 51.00 | 34.69 | 2.00 | $16,639.91 |
+| **max** | 64.00 | 53.13 | 5.00 | $63,770.43 |
+
+---
+
+##  Conclusions
+
+This analysis demonstrates that **lifestyle factors (particularly smoking)** have a far greater impact on insurance costs than demographic characteristics alone. The findings suggest:
+
+1. **Public health interventions** targeting smoking could significantly reduce healthcare costs
+2. **Insurance pricing** appropriately uses smoking status as a key risk factor
+3. **Further research** could explore the causal relationship between smoking and other health outcomes
+
+---
+
+##  Connect With Me
+
+- **LinkedIn:** [linkedin.com/in/eleanor-bryan-35b922255](https://www.linkedin.com/in/eleanor-bryan-35b922255/)
+- **GitHub:** [github.com/eleanor-analytics](https://github.com/eleanor-analytics)
+
+
+---
+
+## 📂 How to Run This Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/eleanor-analytics/medical-insurance-analysis.git
